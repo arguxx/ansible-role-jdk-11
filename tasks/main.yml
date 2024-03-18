@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: Upgrade all packages
+    ansible.builtin.dnf:
+      name: "*"
+      state: latest
+  - name: install java
+    dnf:
+        name: java-11-openjdk.x86_64
+        state: present
+# tasks file for jdk_11
