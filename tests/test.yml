@@ -1,5 +1,5 @@
 ---
-- hosts: jdk
-  remote_user: root
+- hosts: ["all"]
+  become: true
   roles:
-      - jdk11
+      - ../../ansible-role-jdk-11
